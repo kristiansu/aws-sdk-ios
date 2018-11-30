@@ -381,6 +381,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] initWithDictionary:self.interactionKitConfig.globalSessionAttributes];
     [attributes addEntriesFromDictionary:self.sessionAttributes];
     [attributes addEntriesFromDictionary:sessionAttributes];
+
+    [attributes removeObjectForKey:@"cardBody"];
     
     [request setSessionAttributes:attributes];
     [request setAccept:AWSLexAcceptText];
