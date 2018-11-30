@@ -401,6 +401,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
     NSMutableDictionary *attributes = [[NSMutableDictionary alloc] initWithDictionary:self.interactionKitConfig.globalSessionAttributes];
     [attributes addEntriesFromDictionary:self.sessionAttributes];
     [attributes addEntriesFromDictionary:sessionAttributes];
+
+    [attributes removeObjectForKey:@"cardBody"];
     
     [request setSessionAttributes:attributes];
     [request setAccept:AWSLexAcceptMPEG];
@@ -671,6 +673,10 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         NSMutableDictionary *attributes = [[NSMutableDictionary alloc] initWithDictionary:self.interactionKitConfig.globalSessionAttributes];
         [attributes addEntriesFromDictionary:self.sessionAttributes];
         [attributes addEntriesFromDictionary:sessionAttributesForSpeechInput];
+
+        [attributes removeObjectForKey:@"cardBody"];
+        [attributes removeObjectForKey:@"PlainText"];
+
         [request setSessionAttributes:attributes];
         
         if (self.currentState == AWSLexInteractionModeSpeechToText){
