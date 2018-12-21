@@ -761,7 +761,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         self.resumeListening = NO;
         
         [self releaseAudioSource];
-        _publicPostRequest = self->postRequest
+        _publicPostRequest = self->postRequest;
         self->postRequest = nil;
         
         if(task.error){
