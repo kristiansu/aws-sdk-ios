@@ -228,6 +228,8 @@ typedef NS_ENUM(NSInteger, AWSLexSpeechEncoding) {
 
 @property (nonatomic, weak) id<AWSLexAudioPlayerDelegate> audioPlayerDelegate;
 
+@property (nonatomic, strong) AWSLexPostContentRequest *publicPostRequest;
+
 /**
  Returns the singleton interactionKit client. If the singleton object does not exist, the SDK instantiates the default service client with `defaultServiceConfiguration` from `[AWSServiceManager defaultServiceManager]`. The reference to this object is maintained by the SDK, and you do not need to retain it manually.
  
