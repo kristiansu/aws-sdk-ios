@@ -261,7 +261,13 @@ const NSUInteger MaxSpeechTimeoutInterval = 15;
     BOOL isErrored;
 }
 
+@synthesize publicPostRequest = _publicPostRequest;
+
 static AWSSynchronizedMutableDictionary *_serviceClients = nil;
+
+- (AWSLexPostContentRequest *)publicPostRequest {
+    return _publicPostRequest;
+}
 
 - (instancetype)init {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
@@ -755,7 +761,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         self.resumeListening = NO;
         
         [self releaseAudioSource];
-        
+        _publicPostRequest = self->postRequest
         self->postRequest = nil;
         
         if(task.error){
