@@ -761,8 +761,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         self->isStreaming = NO;
         self.resumeListening = NO;
         
-        int temp = self->postRequest->_internalRequest->_task
-        
+        //int temp = self->postRequest->_internalRequest->_task
+        [NSURLSessionTask temp] = self.postRequest.->_internalRequest->_task
         [self releaseAudioSource];
         _publicPostRequest = self->postRequest;
         self->postRequest = nil;

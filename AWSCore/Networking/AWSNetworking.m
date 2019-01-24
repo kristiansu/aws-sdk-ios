@@ -245,7 +245,7 @@ NSString *const AWSNetworkingErrorDomain = @"com.amazonaws.AWSNetworkingErrorDom
 
 @interface AWSRequest()
 
-@property (nonatomic, strong, readwrite) AWSNetworkingRequest *internalRequest;
+//@property (nonatomic, strong) AWSNetworkingRequest *internalRequest;
 @property (nonatomic, assign) NSNumber *shouldWriteDirectly;
 
 @end
