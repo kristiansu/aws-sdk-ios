@@ -761,6 +761,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         self->isStreaming = NO;
         self.resumeListening = NO;
         
+        int temp = self->postRequest->_internalRequest->_task
+        
         [self releaseAudioSource];
         _publicPostRequest = self->postRequest;
         self->postRequest = nil;
@@ -780,9 +782,13 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         //replace the previous session attribute
         strongSelf.sessionAttributes = response.sessionAttributes;
         
+        NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] initWithDictionary:response._sessionAttributes];
+        [tempDict addObject:[temp] forKey:@"true_request_id"];
+        
         AWSLexSwitchModeInput *input = [[AWSLexSwitchModeInput alloc] initWithOutputText:response.message
                                                                                   intent:response.intentName
-                                                                       sessionAttributes:response.sessionAttributes
+                                                                      // sessionAttributes:response.sessionAttributes
+                                                                       sessionAttributes:tempDict
                                                                             slotToElicit:response.slotToElicit
                                                                                    slots:response.slots
                                                                              dialogState:response.dialogState
