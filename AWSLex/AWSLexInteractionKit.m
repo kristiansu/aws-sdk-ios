@@ -782,8 +782,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         //replace the previous session attribute
         strongSelf.sessionAttributes = response.sessionAttributes;
         
-        NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] initWithDictionary:response._sessionAttributes];
-        [tempDict addObject:[temp] forKey:@"true_request_id"];
+        NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] initWithDictionary:response.sessionAttributes];
+        [tempDict addObject:[NSURLSessionTask temp] forKey:@"true_request_id"];
         
         AWSLexSwitchModeInput *input = [[AWSLexSwitchModeInput alloc] initWithOutputText:response.message
                                                                                   intent:response.intentName
