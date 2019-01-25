@@ -161,7 +161,7 @@ NSString *const AWSNetworkingErrorDomain = @"com.amazonaws.AWSNetworkingErrorDom
 
 @interface AWSNetworkingRequest()
 
-//@property (nonatomic, strong) NSURLSessionTask *task;
+@property (nonatomic, strong) NSURLSessionTask *task;
 @property (nonatomic, assign, getter = isCancelled) BOOL cancelled;
 
 @end
