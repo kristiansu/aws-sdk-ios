@@ -109,7 +109,7 @@ static NSDictionary *errorCodeDictionary = nil;
 
 @interface AWSRequest()
 
-@property (nonatomic, strong) AWSNetworkingRequest *internalRequest;
+//@property (nonatomic, strong) AWSNetworkingRequest *internalRequest;
 
 @end
 
