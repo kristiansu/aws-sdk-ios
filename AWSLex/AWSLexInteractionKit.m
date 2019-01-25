@@ -762,7 +762,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         self.resumeListening = NO;
         
         //int temp = self->postRequest->_internalRequest->_task
-        [NSURLSessionTask temp] = self.postRequest.->_internalRequest->_task
+        //[NSURLSessionTask temp] = self.postRequest.->_internalRequest->_task
         [self releaseAudioSource];
         _publicPostRequest = self->postRequest;
         self->postRequest = nil;
@@ -783,7 +783,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
         strongSelf.sessionAttributes = response.sessionAttributes;
         
         NSMutableDictionary *tempDict = [[NSMutableDictionary alloc] initWithDictionary:response.sessionAttributes];
-        [tempDict addObject:[NSURLSessionTask temp] forKey:@"true_request_id"];
+        //[tempDict addObject:[NSURLSessionTask temp] forKey:@"true_request_id"];
         
         AWSLexSwitchModeInput *input = [[AWSLexSwitchModeInput alloc] initWithOutputText:response.message
                                                                                   intent:response.intentName

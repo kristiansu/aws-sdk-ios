@@ -35,7 +35,7 @@ NSString *const AWSS3SDKVersion = @"2.7.3";
 
 @interface AWSRequest()
 
-//@property (nonatomic, strong) AWSNetworkingRequest *internalRequest;
+@property (nonatomic, strong) AWSNetworkingRequest *internalRequest;
 
 @end
 

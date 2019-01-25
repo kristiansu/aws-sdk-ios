@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger, AWSURLSessionTaskType) {
 
 @interface AWSNetworkingRequest()
 
-//@property (nonatomic, strong, read) NSURLSessionTask *task;
+@property (nonatomic, strong, read) NSURLSessionTask *task;
 
 @end
 
