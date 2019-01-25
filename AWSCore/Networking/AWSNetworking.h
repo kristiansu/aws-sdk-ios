@@ -182,7 +182,7 @@ typedef NS_ENUM(NSInteger, AWSHTTPMethod) {
 @property (nonatomic, copy) AWSNetworkingUploadProgressBlock uploadProgress;
 @property (nonatomic, copy) AWSNetworkingDownloadProgressBlock downloadProgress;
 
-@property (readwrite, nonatomic, strong) NSURLSessionTask *task;
+//@property (readwrite, nonatomic, strong) NSURLSessionTask *task;
 @property (readonly, nonatomic, assign, getter = isCancelled) BOOL cancelled;
 
 - (void)assignProperties:(AWSNetworkingConfiguration *)configuration;
